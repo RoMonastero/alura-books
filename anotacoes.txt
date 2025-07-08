@@ -1,0 +1,50 @@
+É ideal usar o mobile first para deixar o projesto responsivo para telas mobile, pois são muito utilizados hoje em dia
+
+@import url("header.css"); - para importar aquivos no css, dessa forma não ficam muitos imports no html e o carregamento da página é feita de forma mais rapida
+
+Variaveis funcionam entre aquivos do css
+
+background-position: center; - posiciona o item no background, como uma imagem
+
+Para fazer um item que aparece e desaparece, como o menu hamburguer, é só criar o botão e a lista no html e no css fazer da seguinte forma:
+.lista-menu{
+    display: none;
+}
+
+.container__botao:checked~.lista-menu{ -Quando o item com a classe container__botao estiver marcado o css fara uma alteração no item com a classe lista-menu
+    display: block;
+}
+
+Para trabalhar com posiçoes, como deixar o menu hamburguer embaixo do item
+
+.cabeçalho{
+    position: relative;
+}
+
+.lista-menu{
+    position: absolute;
+    top: 100%;
+}
+
+Para aplicar cor em texto com linear gradiente
+.lista-menu__link {
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+Para ajustar o placeholder de um input é so usar:
+.banner__pesquisa::placeholder {
+    font-family: var(--fonte-principal);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--branco);
+    background: url("../assets/Lupa.svg") no-repeat;
+    background-position: 1em;
+}
+
+SwiperJS é um plugin que ajuda a fazer um carrossel no html
+
+flex-wrap: wrap; - impede o aumento de largura da página por ter uma quatidade grande de itens dentro do flexbox
